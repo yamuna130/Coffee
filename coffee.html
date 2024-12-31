@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Brew - Premium Coffee Subscription</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background-color: #2C1810;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #D4A574;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #D4A574;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #B88B5D;
+        }
+
+        .features {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: #D4A574;
+            margin-bottom: 1rem;
+        }
+
+        .pricing {
+            background-color: #f5f5f5;
+            padding: 4rem 2rem;
+        }
+
+        .pricing h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-card h3 {
+            color: #D4A574;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background-color: #2C1810;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Daily Brew</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium Coffee Delivered Daily</h1>
+            <p>Wake up to freshly roasted, expertly crafted coffee delivered right to your doorstep.</p>
+            <a href="#pricing" class="cta-button">Start Your Subscription</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Why Choose Daily Brew?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">☕</div>
+                <h3>Fresh Roasted</h3>
+                <p>Our coffee is roasted daily to ensure maximum freshness and flavor.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <h3>Free Delivery</h3>
+                <p>Enjoy free delivery straight to your door, anywhere in the country.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Ethically Sourced</h3>
+                <p>We partner directly with farmers to ensure fair practices and sustainable farming.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <h2>Choose Your Plan</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Starter</h3>
+                <div class="price">$19/mo</div>
+                <p>Perfect for coffee lovers who drink 1-2 cups daily.</p>
+                <ul style="list-style: none; margin: 1rem 0;">
+                    <li>250g monthly</li>
+                    <li>1 type of coffee</li>
+                    <li>Free delivery</li>
+                </ul>
+                <a href="#" class="cta-button">Choose Plan</a>
+            </div>
+            <div class="price-card">
+                <h3>Premium</h3>
+                <div class="price">$29/mo</div>
+                <p>For serious coffee enthusiasts who enjoy variety.</p>
+                <ul style="list-style: none; margin: 1rem 0;">
+                    <li>500g monthly</li>
+                    <li>2 types of coffee</li>
+                    <li>Free delivery</li>
+                </ul>
+                <a href="#" class="cta-button">Choose Plan</a>
+            </div>
+            <div class="price-card">
+                <h3>Ultimate</h3>
+                <div class="price">$49/mo</div>
+                <p>The complete coffee experience for true connoisseurs.</p>
+                <ul style="list-style: none; margin: 1rem 0;">
+                    <li>1kg monthly</li>
+                    <li>3 types of coffee</li>
+                    <li>Priority delivery</li>
+                </ul>
+                <a href="#" class="cta-button">Choose Plan</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <p>Contact us: hello@dailybrew.com</p>
+        <p>© 2024 Daily Brew. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll event listener for header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(44, 24, 16, 0.95)';
+            } else {
+                header.style.backgroundColor = '#2C1810';
+            }
+        });
+    </script>
+</body>
+</html>
